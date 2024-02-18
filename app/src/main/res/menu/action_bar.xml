@@ -7,22 +7,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:title="Camara"
-        app:showAsAction="always"/>
+        app:showAsAction="always" />
     <item
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:title="Búsqueda"
-        app:showAsAction="always"/>
+        app:showAsAction="always" />
     <item
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:title="Nuevo grupo"/>
+        android:title="Nuevo grupo" />
     <item
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:title="Nueva difusión"/>
+        android:title="Nueva difusión" />
     <item
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:title="Ajustes"/>
+        android:title="Ajustes" />
 </menu>

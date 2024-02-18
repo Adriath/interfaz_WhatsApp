@@ -17,12 +17,14 @@ public class MainActivity extends AppCompatActivity {
             getSupportActionBar().show() ;
         }
 
-//        @Override
-//        public boolean onCreateOptionsMenu(Menu menu){
-//            getMenuInflater().inflate(R.menu.action_bar,menu) ;
-//
-//            return true ;
-//        }
-        // A partir de aquí no estoy seguro de cómo continuar, y dudo la clase AppCompatActivity es correcta.
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.action_bar,menu) ;
+
+        return true ;
+    }
+
+
 }
