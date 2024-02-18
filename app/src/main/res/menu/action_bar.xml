@@ -8,23 +8,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:icon="@drawable/ic_camara"
-        android:title="camara"
+        android:title="Cámara"
         app:showAsAction="always" />
     <item
+        android:id="@+id/Busqueda"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:title="Búsqueda"
         android:icon="@drawable/ic_busqueda"
         app:showAsAction="always" />
     <item
+        android:id="@+id/NuevoGrupo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:title="Nuevo grupo" />
     <item
+        android:id="@+id/NuevaDifusion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:title="Nueva difusión" />
     <item
+        android:id="@+id/Ajustes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:title="Ajustes" />

@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -17,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     MenuItem itNuevaDifusion ;
     MenuItem itAjustes ;
 
+    Intent nuevaVentana ;
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +27,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         itCamara =findViewById(R.id.Camara) ;
+        itBusqueda =findViewById(R.id.Busqueda) ;
+        itNuevoGrupo =findViewById(R.id.NuevoGrupo) ;
+        itNuevaDifusion =findViewById(R.id.NuevaDifusion) ;
+        itAjustes =findViewById(R.id.Ajustes) ;
+
+        nuevaVentana = new Intent (MainActivity.this, SecActivity.class) ;
 
         if(getSupportActionBar() != null){
             getSupportActionBar().show() ;
@@ -45,10 +54,36 @@ public class MainActivity extends AppCompatActivity {
 
         if(opcion == R.id.Camara){
 
-            Toast.makeText(this,"Todo va bien", Toast.LENGTH_SHORT).show() ;
+            nuevaVentana.putExtra("posicion", "Estás en el módulo de cámara") ;
+            startActivity(nuevaVentana) ;
+            return true ;
+
+        }
+        else if (opcion == R.id.Busqueda) {
+
+            nuevaVentana.putExtra("posicion", "Estás en la pantalla de búsqueda") ;
+            startActivity(nuevaVentana) ;
             return true ;
         }
-        else{
+        else if (opcion == R.id.NuevoGrupo) {
+
+            nuevaVentana.putExtra("posicion", "Estás en la pantalla para crear un nuevo grupo") ;
+            startActivity(nuevaVentana) ;
+            return true ;
+        }
+        else if (opcion == R.id.NuevaDifusion) {
+
+            nuevaVentana.putExtra("posicion", "Estás en en la pantalla de difusión") ;
+            startActivity(nuevaVentana) ;
+            return true ;
+        }
+        else if (opcion == R.id.Ajustes) {
+
+            nuevaVentana.putExtra("posicion", "Estás en la pantalla de ajustes") ;
+            startActivity(nuevaVentana) ;
+            return true ;
+        }
+        else {
 
             return super.onOptionsItemSelected(item) ;
         }
